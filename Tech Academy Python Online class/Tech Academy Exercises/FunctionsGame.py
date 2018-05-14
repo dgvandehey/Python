@@ -41,7 +41,7 @@ def nice_mean(nice, mean, name):
             print("\nThe stranger glares at you and storms away")
             mean=(mean+1)
             stop=False
-            score(nice,mean,name)#pass the three variable to the score()
+    score(nice,mean,name)#pass the three variable to the score()
 
 def show_score(nice, mean, name):
     print("\n{},You currently have ({}, Nice) and ({} Mean) points.".format(name, nice, mean) )
@@ -68,7 +68,7 @@ def again(nice, mean, name):
         choice=raw_input("Do you want to play again? y/n").lower()
         if choice=="y":
             stop=False
-            reset=(nice,mean,name)
+            reset(nice,mean,name)
         if choice=="n":
             print ("Bye, thanks for playing")
             stop=False
@@ -79,7 +79,7 @@ def again(nice, mean, name):
 def reset(nice,mean,name):
     nice=0
     mean=0
-    start(nice,mean,name)
+    reset(nice,mean,name)
 
 if __name__ == "__main__":
     start()
